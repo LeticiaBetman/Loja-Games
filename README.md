@@ -1,15 +1,19 @@
-# 🕹️ Loja de Games - Backend em NestJS
+# 🎮 Loja de Games - Backend em NestJS
 
-Este é um projeto backend construído com **NestJS** para gerenciar uma loja de games, permitindo cadastro de produtos organizados por categorias.
+Este é um projeto backend construído com **NestJS** para gerenciar uma loja de games, permitindo o cadastro de produtos organizados por categorias.
 
-## 🚀 Funcionalidades
+---
+
+## ✅ Funcionalidades
 
 - CRUD completo de **Produtos**
 - CRUD completo de **Categorias**
-- Relacionamento OneToMany entre Categoria e Produto
+- Relacionamento **OneToMany** entre Categoria e Produto
 - Validação de dados e tratamento de exceções
-- Testado com Insomnia
-- Conectado ao banco de dados com TypeORM
+- Testado com **Insomnia**
+- Integração com banco de dados usando **TypeORM**
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -17,89 +21,73 @@ Este é um projeto backend construído com **NestJS** para gerenciar uma loja de
 - [TypeScript](https://www.typescriptlang.org/)
 - [TypeORM](https://typeorm.io/)
 - [MySQL](https://www.mysql.com/)
-- [Insomnia](https://insomnia.rest/) – testes de API
+- [Insomnia](https://insomnia.rest/) – para testes de API
+
+---
 
 ## 🔗 Relacionamento
 
 - Uma **Categoria** possui vários **Produtos**
 - Um **Produto** pertence a uma **Categoria**
 
-## 📂 Estrutura do Projeto
+---
+
+## 📁 Estrutura do Projeto
 
 src/
-│
 ├── categoria/
 │ ├── controller/
 │ ├── entity/
 │ ├── service/
-│
 ├── produto/
 │ ├── controller/
 │ ├── entity/
 │ ├── service/
-│
 ├── app.controller.ts
 ├── app.module.ts
-├── main.ts
+└── main.ts
+---
 
-bash
-Copiar
-Editar
-
-## ⚙️ Como executar
-
-1. Clone o repositório:
-   ```bash
+## ▶️ Como executar
+```bash
+1. Clone o repositório
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
-Instale as dependências:
 
-bash
-Copiar
-Editar
-npm install
-Configure o banco de dados no arquivo app.module.ts
+2. Instale as dependências
+   npm install
 
-Execute a aplicação:
+3- Configure o banco de dados
+   Edite as configurações no arquivo app.module.ts
 
-bash
-Copiar
-Editar
-npm run start:dev
-Teste os endpoints no Insomnia
+4. Execute a aplicação
+   npm run start:dev
 
-🧪 Endpoints para Teste no Insomnia
+5. Teste os endpoints com o Insomnia
+
+🔌 Endpoints da API
+📦 Produto
+| Método | Rota                  | Ação            |
+| ------ | --------------------- | --------------- |
+| GET    | `/produto`            | Listar todos    |
+| GET    | `/produto/:id`        | Buscar por ID   |
+| GET    | `/produto/nome/:nome` | Buscar por nome |
+| POST   | `/produto`            | Criar           |
+| PUT    | `/produto`            | Atualizar       |
+| DELETE | `/produto/:id`        | Deletar         |
+
+🗂 Categoria
+| Método | Rota                    | Ação            |
+| ------ | ----------------------- | --------------- |
+| GET    | `/categoria`            | Listar todas    |
+| GET    | `/categoria/:id`        | Buscar por ID   |
+| GET    | `/categoria/nome/:nome` | Buscar por nome |
+| POST   | `/categoria`            | Criar           |
+| PUT    | `/categoria`            | Atualizar       |
+| DELETE | `/categoria/:id`        | Deletar         |
+
+🧪 Exemplos de JSON
 Produto
-GET /produto → listar todos
-
-GET /produto/:id → buscar por ID
-
-GET /produto/nome/:nome → buscar por nome
-
-POST /produto → criar
-
-PUT /produto → atualizar
-
-DELETE /produto/:id → deletar
-
-Categoria
-GET /categoria → listar todas
-
-GET /categoria/:id → buscar por ID
-
-GET /categoria/nome/:nome → buscar por nome
-
-POST /categoria → criar
-
-PUT /categoria → atualizar
-
-DELETE /categoria/:id → deletar
-
-🧾 Exemplos de JSON
-Produto
-json
-Copiar
-Editar
 {
   "nome": "The Witcher 3",
   "descricao": "RPG de mundo aberto",
@@ -109,13 +97,12 @@ Editar
     "id": 1
   }
 }
+
 Categoria
-json
-Copiar
-Editar
 {
   "nome": "RPG",
   "descricao": "Jogos de interpretação de personagem"
 }
-🧠 Desenvolvido por
+
+👩‍💻 Desenvolvido por
 Letícia Rodrigues Betman – Projeto de prática com NestJS.
