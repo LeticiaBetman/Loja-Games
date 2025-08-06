@@ -29,23 +29,7 @@ Este é um projeto backend construído com **NestJS** para gerenciar uma loja de
 
 - Uma **Categoria** possui vários **Produtos**
 - Um **Produto** pertence a uma **Categoria**
-
----
-
-## 📁 Estrutura do Projeto
-
-src/
-├── categoria/
-│ ├── controller/
-│ ├── entity/
-│ ├── service/
-├── produto/
-│ ├── controller/
-│ ├── entity/
-│ ├── service/
-├── app.controller.ts
-├── app.module.ts
-└── main.ts
+  
 ---
 
 ## ▶️ Como executar
