@@ -41,7 +41,7 @@ Este é um projeto backend construído com **NestJS** para gerenciar uma loja de
 2. Instale as dependências
    npm install
 
-3- Configure o banco de dados
+3. Configure o banco de dados
    Edite as configurações no arquivo app.module.ts
 
 4. Execute a aplicação
